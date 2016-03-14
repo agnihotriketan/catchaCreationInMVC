@@ -1,50 +1,10 @@
-/* NUGET: BEGIN LICENSE TEXT
- *
- * Microsoft grants you the right to use these script files for the sole
- * purpose of either: (i) interacting through your browser with the Microsoft
- * website or online service, subject to the applicable licensing or use
- * terms; or (ii) using the files as included with a Microsoft product subject
- * to that product's license terms. Microsoft reserves all other rights to the
- * files not expressly granted by Microsoft, whether by implication, estoppel
- * or otherwise. Insofar as a script file is dual licensed under GPL,
- * Microsoft neither took the code under GPL nor distributes it thereunder but
- * under the terms set out in this paragraph. All notices and licenses
- * below are for informational purposes only.
- *
- * NUGET: END LICENSE TEXT */
-
-/**
-* bootstrap.js v3.0.0 by @fat and @mdo
-* Copyright 2013 Twitter Inc.
-* http://www.apache.org/licenses/LICENSE-2.0
-*/
+ 
 if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
-/* ========================================================================
- * Bootstrap: transition.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#transitions
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
+ 
 
 +function ($) { "use strict";
-
-  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
-  // ============================================================
-
+     
   function transitionEnd() {
     var el = document.createElement('bootstrap')
 
@@ -75,27 +35,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     $.support.transition = transitionEnd()
   })
 
-}(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: alert.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#alerts
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
+}(window.jQuery); 
 
 +function ($) { "use strict";
 
@@ -175,27 +115,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
 
 }(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: button.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#buttons
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
-
+ 
 +function ($) { "use strict";
 
   // BUTTON PUBLIC CLASS DEFINITION
@@ -284,27 +204,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     e.preventDefault()
   })
 
-}(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: carousel.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#carousel
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
+}(window.jQuery); 
 
 +function ($) { "use strict";
 
@@ -502,28 +402,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     })
   })
 
-}(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: collapse.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#collapse
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
-
+}(window.jQuery); 
 +function ($) { "use strict";
 
   // COLLAPSE PUBLIC CLASS DEFINITION
@@ -682,27 +561,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     $target.collapse(option)
   })
 
-}(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: dropdown.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#dropdowns
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
+}(window.jQuery); 
 
 +function ($) { "use strict";
 
@@ -837,28 +696,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     .on('click.bs.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
     .on('keydown.bs.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
-}(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: modal.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#modals
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
-
+}(window.jQuery); 
 +function ($) { "use strict";
 
   // MODAL CLASS DEFINITION
@@ -1084,29 +922,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     .on('show.bs.modal',  '.modal', function () { $(document.body).addClass('modal-open') })
     .on('hidden.bs.modal', '.modal', function () { $(document.body).removeClass('modal-open') })
 
-}(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: tooltip.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#tooltip
- * Inspired by the original jQuery.tipsy by Jason Frame
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
-
+}(window.jQuery); 
 +function ($) { "use strict";
 
   // TOOLTIP PUBLIC CLASS DEFINITION
@@ -1471,28 +1287,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     return this
   }
 
-}(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: popover.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#popovers
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
-
+}(window.jQuery); 
 +function ($) { "use strict";
 
   // POPOVER PUBLIC CLASS DEFINITION
@@ -1589,27 +1384,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     return this
   }
 
-}(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: scrollspy.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#scrollspy
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
+}(window.jQuery); 
 
 +function ($) { "use strict";
 
@@ -1748,28 +1523,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     })
   })
 
-}(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: tab.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#tabs
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
-
+}(window.jQuery); 
 +function ($) { "use strict";
 
   // TAB CLASS DEFINITION
@@ -1885,27 +1639,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   })
 
 }(window.jQuery);
-
-/* ========================================================================
- * Bootstrap: affix.js v3.0.0
- * http://twbs.github.com/bootstrap/javascript.html#affix
- * ========================================================================
- * Copyright 2012 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
-
+ 
 +function ($) { "use strict";
 
   // AFFIX CLASS DEFINITION

@@ -16,20 +16,20 @@ namespace catchaCreationInMVC.Services
 
         public void GenerateImage()
         {
-            using (Bitmap objBMP = new Bitmap(60, 20))
+            using (Bitmap objBMP = new Bitmap(285,100))
             { 
                 using (Graphics objGraphics = Graphics.FromImage(objBMP))
                 {
                     objGraphics.Clear(Color.Green);
                     objGraphics.TextRenderingHint = TextRenderingHint.AntiAlias;
-                    using (Font objFont = new Font("Arial", 8, FontStyle.Bold))
+                    using (Font objFont = new Font("Arial", 50, FontStyle.Bold))
                     {
                         string randomStr = string.Empty;
                         int[] myIntArray = new int[5];
                         Random autoRand = new Random();
                         for (var x = 0; x < 5; x++)
                         {
-                            myIntArray[x] = System.Convert.ToInt32(autoRand.Next(0, 9));
+                            myIntArray[x] = Convert.ToInt32(autoRand.Next(0, 9));
                             randomStr += (myIntArray[x].ToString());
                         }
 
