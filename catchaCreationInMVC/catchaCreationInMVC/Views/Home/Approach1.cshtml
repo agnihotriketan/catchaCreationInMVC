@@ -1,0 +1,66 @@
+﻿@using catchaCreationInMVC.Models
+@model AppViewModel
+
+@{
+    ViewBag.Title = "Captcha Check";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Approach1", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+            @Html.AntiForgeryToken()
+            <h4>Please confirm, You are not robot..!!</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            if (!string.IsNullOrWhiteSpace(ViewBag.ErrorMessage))
+            {
+                <h2>@ViewBag.ErrorMessage </h2>
+            }
+            <div class="form-group">
+                @Html.LabelFor(m => m.Text, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Text, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Text, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <div class="form-group">
+
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-5">
+                    <input type="submit" value="Validate" class="btn btn-default" /> &nbsp;
+                    <input id="refreshCaptcha" type="button" class="btn btn-default" value="Get New Captcha" />
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Captcha", new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    <iframe id="capchaIframe" src="@Url.Action("ShowCaptchaImage", new { width = 300, height = 50, totalCharacters = 5 })" scrolling="no" style="border:none;  width:300px; " />
+
+                </div>
+
+            </div>
+
+
+        }
+    </div>
+
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+
+            $("#refreshCaptcha").on('click', function (e) {
+                alert(1256);
+            });
+        });
+
+        $("#refreshCaptcha").on('click', function (e) {
+            alert(1256);
+        });
+    </script>
+}

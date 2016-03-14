@@ -3,38 +3,34 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Text;
-using System.IO;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.SessionState;
 
 namespace catchaCreationInMVC.Services
 {
-    public class CaptchaHandler:IDisposable
-    {
-        
-
-        public void GenerateImage()
+    public class CaptchaHandler : IDisposable
+    { 
+        public void GenerateImage(int _width, int _height, int _totalCharacters)
         {
-            using (Bitmap objBMP = new Bitmap(285,100))
-            { 
+            using (Bitmap objBMP = new Bitmap(_width, _height))
+            {
                 using (Graphics objGraphics = Graphics.FromImage(objBMP))
                 {
                     objGraphics.Clear(Color.Green);
                     objGraphics.TextRenderingHint = TextRenderingHint.AntiAlias;
                     using (Font objFont = new Font("Arial", 50, FontStyle.Bold))
                     {
-                        string randomStr = string.Empty;
-                        int[] myIntArray = new int[5];
+                        string captchaString = string.Empty;
+                        int[] myIntArray = new int[_totalCharacters];
                         Random autoRand = new Random();
-                        for (var x = 0; x < 5; x++)
+                        for (var x = 0; x < _totalCharacters; x++)
                         {
                             myIntArray[x] = Convert.ToInt32(autoRand.Next(0, 9));
-                            randomStr += (myIntArray[x].ToString());
+                            captchaString += (myIntArray[x].ToString());
                         }
 
-                        HttpContext.Current.Session[InfraCons.CaptchaSessionKey] = randomStr;
-                        objGraphics.DrawString(randomStr, objFont, Brushes.White, 3, 3);
+                        HttpContext.Current.Session[InfraCons.CaptchaSessionKey] = captchaString;
+                        objGraphics.DrawString(captchaString, objFont, Brushes.White, 3, 3);
 
                         HttpContext.Current.Response.ContentType = "image/GIF";
                         objBMP.Save(HttpContext.Current.Response.OutputStream, ImageFormat.Gif);
@@ -77,5 +73,26 @@ namespace catchaCreationInMVC.Services
             // GC.SuppressFinalize(this);
         }
         #endregion
+    }
+
+
+    public class CaptchaResult : ActionResult
+    {
+        private int width { get; set; }
+        private int height { get; set; }
+        private int totalCharacters { get; set; }
+
+        public CaptchaResult(int _width, int _height, int _totalCharacters)
+        {
+            width = _width;
+            height = _height;
+            totalCharacters = _totalCharacters;
+        }
+
+        public override void ExecuteResult(ControllerContext context)
+        {
+            var obj = new CaptchaHandler();
+            obj.GenerateImage(width,height,totalCharacters);
+        }
     }
 }
