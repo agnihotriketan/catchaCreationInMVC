@@ -18,7 +18,7 @@ namespace catchaCreationInMVC.Services
                 {
                     objGraphics.Clear(Color.Green);
                     objGraphics.TextRenderingHint = TextRenderingHint.AntiAlias;
-                    using (Font objFont = new Font("Arial", 50, FontStyle.Bold))
+                    using (Font objFont = new Font("Arial", 40, FontStyle.Bold))
                     {
                         string captchaString = string.Empty;
                         int[] myIntArray = new int[_totalCharacters];
