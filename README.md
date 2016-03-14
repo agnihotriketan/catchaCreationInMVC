@@ -7,3 +7,5 @@ I have used two approach to build captcha.
 
 
 I am using bitmap,Graphics classes. I have created a random digit to put in bitmap image object before disposing. 
+
+I have added random generated no string in session. On post back I am verifying captcha entered by user. 
